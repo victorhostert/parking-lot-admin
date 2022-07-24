@@ -1,7 +1,6 @@
 # Parking Lot Admin
 
 ### Developed by Victor William Hostert
-<br>
 
 ---
 ## 🧪 Technologies used in this project
