@@ -17,14 +17,6 @@ class ParkMovementViewSet(viewsets.ModelViewSet):
     serializer_class = ParkMovementSerializer
     permission_classes = [permissions.AllowAny]
 
-    def validate_exit_date(self, data):
-        """
-        Checks if the exit_date comes after the entry_date
-        """
-        if data['entry_date'] > data['exit_date']:
-            raise serializers.ValidationError({"exit_date": "exit date must be posterior to entry_date"})
-        return data
-
     def create(self, request, *args, **kwargs):
         plate = request.data['plate']
         vehicle = request.data['vehicle']
